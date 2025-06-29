@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1699891730669-2d15cf3a5979?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.container {
+  background: linear-gradient(135deg, #fc466ac0 0%, #3f5efbc0 100%);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 500px;
+  max-width: 90%;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: block;
+  color: white;
+}
+
+input[type="date"] {
+  padding: 20px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+}
+
+input[type="date"]:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2575fc;
+}
+
+.reset-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn:hover {
+  background-color: #c82333;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+#result {
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  input[type="date"] {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
