@@ -275,6 +275,80 @@ button:active {
   color: #ef4444;
 }
 
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 10;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 480px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  margin: 0;
+}
+
+.author-name {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:active {
+  transform: scale(0.95);
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
   .container {
@@ -310,6 +384,30 @@ button:active {
     flex-direction: column;
     align-items: center;
   }
+
+  .footer {
+    padding: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -339,6 +437,19 @@ button:active {
     font-size: 0.9rem;
     min-width: 100px;
   }
+
+  .footer-content {
+    padding: 12px 16px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .social-link {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 /* Loading animation for better UX */
@@ -349,7 +460,8 @@ button:active {
 
 /* Focus styles for accessibility */
 button:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+.social-link:focus {
   outline: 2px solid rgba(255, 255, 255, 0.8);
   outline-offset: 2px;
 }
