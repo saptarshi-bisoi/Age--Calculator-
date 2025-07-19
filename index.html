@@ -5,17 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="A modern age calculator with beautiful UI/UX design"
+    />
   </head>
   <body>
-    <div class="container">
-      <label for="birthdate">Enter your Birthdate:</label>
-      <input type="date" id="birthdate" />
-      <div class="button-group">
-        <button onclick="calculateAge()">Calculate Age</button>
-        <button onclick="resetForm()" class="reset-btn">Reset</button>
-      </div>
-      <p id="result"></p>
-    </div>
+    <main class="container">
+      <header>
+        <h1>Age Calculator</h1>
+        <p class="subtitle">Discover your exact age with precision</p>
+      </header>
+
+      <form onsubmit="event.preventDefault(); calculateAge();">
+        <div class="input-group">
+          <label for="birthdate">Enter your birthdate</label>
+          <input
+            type="date"
+            id="birthdate"
+            name="birthdate"
+            aria-describedby="birthdate-help"
+            required
+          />
+          <small id="birthdate-help"
+            >Select your date of birth to calculate your exact age</small
+          >
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="primary-btn">
+            <span>Calculate Age</span>
+          </button>
+          <button type="button" onclick="resetForm()" class="reset-btn">
+            <span>Reset</span>
+          </button>
+        </div>
+      </form>
+
+      <div id="result" role="status" aria-live="polite"></div>
+    </main>
 
     <script src="script.js"></script>
   </body>
