@@ -26,7 +26,11 @@
 
 <img width="1899" height="1049" alt="image" src="https://github.com/user-attachments/assets/20c7aed7-85c5-4c05-b57a-a90c88a5e338" />
 
+## 🌐 Live Demo
+
+👉 [Click here to try the app now](https://age-calculator-plum-seven.vercel.app/)
 ---
+
 
 ## 👨‍💻 Tech Stack
 
